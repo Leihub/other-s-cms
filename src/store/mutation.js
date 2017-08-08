@@ -19,5 +19,11 @@ export default {
   },
   SET_USER:(state,user)=>{
     state.user = user
+  },
+  UPDATE_CONTENT:(state,content)=>{
+    state.article.content = content
+  },
+  UPDATE_TITLE:(state,title)=>{
+    state.article.title = title
   }
 }
