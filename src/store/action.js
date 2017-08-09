@@ -32,6 +32,14 @@ export default {
         commit('SET_LINKS', res.data)
       })
   },
+  saveLinks:({commit,state})=>{
+    return Vue.http.post('/api/saveLinks',state.links)
+    .then(
+      ()=> doToast(state,commit,{info:'保存成功',btnNum:1}),
+      ()=> doToast(state,commit,{info:'保存失败',btnNum:1})
+    )
+    .finally(()=>commit('TOASTING_TOGGLE',false))
+  }
   getArticle: ({commit}, id) => {
     const start = beginLoading(commit)
     return Vue.http.get('./api/getArticle', {params: id})
@@ -68,4 +76,20 @@ export default {
       .catch(()=>{
       })
   },
+  saveArticle:({commit,state})=>{
+    return Vue.http.post('/api/saveArticle',state.article)
+    .then(
+      ()=> doToast(state,commit,{info:'保存成功，是否返回?',btnNum:2}),
+      ()=> doToast(state,commit,{info:'保存失败',btnNum:1})
+    )
+    .finally(()=>commit('TOASTING_TOGGLE',false))
+  },
+  savePwd:({commit,state},pwd)=>{
+    return Vue.http.post('/api/savePwd',{name:state.user.name,pwd})
+    .then(
+      ()=> doToast(state,commit,{info:'保存成功',btnNum:1}),
+      ()=> doToast(state,commit,{info:'保存失败',btnNum:1})
+    )
+    .finally(()=>commit('TOASTING_TOGGLE',false))
+  }
 }
