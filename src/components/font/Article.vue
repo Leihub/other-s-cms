@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import myHeader from 'header.vue'
-import myFooter from 'footer.vue'
+import myHeader from './header.vue'
+import myFooter from './footer.vue'
 import {mapState} from 'vuex'
 import hljs from '../../assets/js/highlight.pack'
 import marked from '../../assets/js/marked.min'

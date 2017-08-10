@@ -23,7 +23,7 @@
 
 <script>
 import {mapActions} from 'vuex'
-import {set} from '../../assets/cookieUtil'
+import {set} from '../../assets/js/cookieUtil'
 export default {
   data(){
     return{

@@ -4,8 +4,8 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import {mapState} from 'vuex'
 
-import Spinner from './components/share/Spinner.vue'
-import Toast from './components/share/Toast.vue'
+import Spinner from './components/share/spinner.vue'
+import Toast from './components/share/toast.vue'
 import MyCanvas from './components/share/MyCanvas.vue'
 
 

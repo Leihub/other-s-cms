@@ -5,7 +5,7 @@ const beginLoading = commit => {
   return Date.now()
 }
 
-const stopLoading = (commit, start, timeAllowed == 400) => {
+const stopLoading = (commit, start, timeAllowed = 400) => {
   const spareTime = timeAllowed - (Date.now() - start)
   setTimeout(commit, spareTime > 0 ? spareTime : 0, 'LOADING_TOGGLE', false)
 }
@@ -39,7 +39,7 @@ export default {
       ()=> doToast(state,commit,{info:'保存失败',btnNum:1})
     )
     .finally(()=>commit('TOASTING_TOGGLE',false))
-  }
+  },
   getArticle: ({commit}, id) => {
     const start = beginLoading(commit)
     return Vue.http.get('./api/getArticle', {params: id})

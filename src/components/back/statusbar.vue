@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import {unset} from '../../assets/cookieUtil'
+import {unset} from '../../assets/js/cookieUtil'
 import {mapState,mapMutations} from 'vuex'
 export default {
   methods: {

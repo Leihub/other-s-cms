@@ -26,7 +26,7 @@
 <script>
 import myHeader from './header.vue'
 import myFooter from './footer.vue'
-import Spinner from '../share/Spinner.vue'
+import Spinner from '../share/spinner.vue'
 import {mapState,mapGetters,mapActions} from 'vuex'
 
 export default {

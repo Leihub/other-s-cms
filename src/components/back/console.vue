@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import {StatusBar} from 'statusbar'
+import {StatusBar} from './statusbar.vue'
 import {mapMutations,mapState} from 'vuex'
 import {get} from '../../assets/js/cookieUtil'
 export default {
