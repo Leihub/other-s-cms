@@ -47,7 +47,7 @@ export default {
       this.SET_USER({name:user,pwd:''})
     }
   },
-  computed:mapState(['user'])
+  computed:mapState(['user']),
   methods:mapMutations(['SET_USER'])
 }
 </script>

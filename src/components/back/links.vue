@@ -50,7 +50,7 @@ export default {
   },
   computed:mapState(['links']),
   methods:{
-    ...mapActions(['saveLinks','getLinks'])
+    ...mapActions(['saveLinks','getLinks']),
     ...mapMutations(['UPDATE_LINK_NAME', 'UPDATE_LINK_HREF', 'ADD_NEW_LINK', 'REMOVE_LINK'])
   }
 

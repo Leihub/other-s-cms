@@ -18,7 +18,7 @@ app.use(cookieParser())
 app.use('/dist',express.static(resolve('../dist')))
 app.use(api)
 
-app.get('/api/setup',function (req,res) {
+app.post('/api/setup',function (req,res) {
   new db.User(req.body)
   .save()
   .then(()=>{
@@ -30,7 +30,8 @@ app.get('/api/setup',function (req,res) {
   })
 })
 
-app.get('*',function(req,res)=>{
+app.get('*',function(req,res){
+  // console.log(db.initialized);
   const fileName = db.initialized?'index.html':'setup.html'
   const html = fs.readFileSync(resolve('../'+fileName),'utf-8')
   res.send(html)

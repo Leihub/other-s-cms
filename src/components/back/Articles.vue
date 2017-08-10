@@ -30,13 +30,13 @@
 <script>
 import {mapState,mapActions} from 'vuex'
 export default {
-  methods:...mapActions(['getArticles,deleteArticle']),
+  methods:mapActions(['getArticles,deleteArticle']),
   created(){
     this.getArticles()
   },
   computed:mapState(['articles'])
   }
-}
+
 </script>
 
 <style lang="css">

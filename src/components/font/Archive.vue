@@ -27,7 +27,7 @@
 import myHeader from './header.vue'
 import myFooter from './footer.vue'
 import Spinner from '../share/Spinner.vue'
-import {mapState.mapGetters,mapActions} from 'vuex'
+import {mapState,mapGetters,mapActions} from 'vuex'
 
 export default {
   components:{
@@ -37,7 +37,7 @@ export default {
   },
   created(){
     this.getArticles()
-  }
+  },
   methods:{
     getArticles(){
       return this.$store.dispatch('getArticles')
